@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "check": "tsc -p tsconfig.json",
-    "deploy": "opencomputer deploy --alias production"
+    "deploy": "opencomputer deploy"
   },
   "devDependencies": {
     "@opencomputer/agent": "^0.7.2",

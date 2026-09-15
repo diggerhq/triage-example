@@ -193,8 +193,9 @@ onboarding/                optional self-serve page (~60 lines)
 5. In Gmail, filter inbound reports to the `triage` label. The mailbox owner's
    own filters decide what this agent ever sees — changing what gets triaged
    does not mean redeploying it.
-6. `opencomputer deploy --alias production`. The schedule is production-only, so
-   a development deployment stays hand-driven with `opencomputer session create`.
+6. `npm run deploy`. Development is the default alias, and its schedule runs the
+   same five-minute sweep as production. Use `opencomputer deploy --alias production`
+   only when you deliberately want to promote the agent.
 
 Findings go to the connected account, for a human to review. Nothing is ever
 sent to the reporter.
