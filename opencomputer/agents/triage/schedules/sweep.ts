@@ -16,15 +16,15 @@ import { defineSchedule } from "@opencomputer/agent";
  * minute-by-minute mostly means `skip` doing its job rather than five times
  * the throughput.
  *
- * Production only. A development deployment is for driving by hand with
- * `opencomputer run triage`, and a cron firing behind that would re-read the
- * same mailbox while you are looking at it.
+ * Both deployment aliases run the same sweep. Development is the default so
+ * someone evaluating the example sees the complete scheduled flow without
+ * first promoting it to production.
  */
 export default defineSchedule({
   id: "sweep",
   cron: "*/5 * * * *",
   timezone: "UTC",
-  enabled: ["production"],
+  enabled: ["development", "production"],
   overlap: "skip",
   dispatch: {
     text: "Check the mailbox and triage the next report, if there is one.",
