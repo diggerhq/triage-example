@@ -1,0 +1,15 @@
+node_modules/
+
+# Build output. `opencomputer` compiles the agent into this directory beside
+# the source it was built from.
+.opencomputer/
+
+# Artifacts produced by build.mjs on the way to a deployment.
+artifact.zip
+built.json
+deploy.json
+
+# Credentials. The Resend key belongs in a managed secret and the Gmail grant
+# belongs to the platform; neither should ever appear here.
+.env
+.env.local

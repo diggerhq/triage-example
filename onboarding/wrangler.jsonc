@@ -1,0 +1,9 @@
+{
+  "name": "triage-onboarding",
+  "main": "index.ts",
+  "compatibility_date": "2026-06-01",
+
+  // The one secret: an OpenComputer API key for the org whose agent sweeps
+  // these mailboxes. `wrangler secret put OPENCOMPUTER_API_KEY`.
+  "vars": { "OC_API_URL": "https://app.opencomputer.dev" }
+}
